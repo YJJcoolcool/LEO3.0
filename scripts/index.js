@@ -1,6 +1,5 @@
 function darkModeToggle(){
     if (document.getElementById("darkmodecheckbox").checked){
-        document.getElementById("darkmodecheckbox").checked=true;
         var link = document.createElement('link');
         link.type = 'text/css';
         link.rel = 'stylesheet';
@@ -37,9 +36,12 @@ function getCookie(cname) {
     return "";
 }
 
-function ready(){
-    if (getCookie("darkmode")=="y"){
-        darkModeToggle()
-    }
+if (getCookie("darkmode")=="y"){
+    var link = document.createElement('link');
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = 'stylesheets/darkmode.css';
+    link.id = "darkmode";
+    document.head.appendChild(link);
+    document.getElementById("darkmodecheckbox").checked=true;
 }
-ready()
