@@ -43,5 +43,5 @@ if (getCookie("darkmode")=="y"){
     link.href = 'stylesheets/darkmode.css';
     link.id = "darkmode";
     document.head.appendChild(link);
-    document.getElementById("darkmodecheckbox").checked=true;
+    setTimeout(()=>{document.getElementById("darkmodecheckbox").checked=true},100);
 }
