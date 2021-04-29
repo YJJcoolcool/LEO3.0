@@ -37,6 +37,8 @@ function getCookie(cname) {
     return "";
 }
 
-if (getCookie("darkmode")=="y"){
-    darkModeToggle()
+function ready(){
+    if (getCookie("darkmode")=="y"){
+        darkModeToggle()
+    }
 }
