@@ -1,0 +1,14 @@
+html,body{
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
+button{
+    background-color: rgb(48, 48, 48);
+    color: white;
+}
+#specific a{
+    color: #4e6eff;
+}
+footer{
+    background-color: #333;
+}
