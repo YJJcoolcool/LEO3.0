@@ -45,3 +45,12 @@ if (getCookie("darkmode")=="y"){
     document.head.appendChild(link);
     setTimeout(()=>{document.getElementById("darkmodecheckbox").checked=true},100);
 }
+
+setTimeout(()=>{
+  document.getElementById("searchbox").addEventListener("keyup",function(event){
+    if (event.keyCode===13){
+      event.preventDefault();
+      document.getElementById("submit").click();
+    }
+  })
+})

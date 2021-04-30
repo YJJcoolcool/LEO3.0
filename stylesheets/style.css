@@ -18,7 +18,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 30px;
+    padding: 15px 15px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -49,7 +49,7 @@ header input:before {
     border-radius: 50px;
     transition: transform 0.2s;
 }
-header input:checked:before{
+header input[type=checkbox]:checked:before{
     transform: translateX(85%);
 }
 h1{
@@ -69,20 +69,32 @@ h2{
 }
 #searchbox{
     font-size: 20px;
-    color: rgb(75, 75, 75);
+    color: #4b4b4b;
     width: 500px;
-    padding: 7px 20px;
-    border: 2px solid rgb(179, 179, 179);
+    padding: 7px 40px;
+    border: 2px solid #b3b3b3;
     border-radius: 100px;
+    box-sizing: border-box;
     outline: none;
     background: none;
+    transition: color 0.5s;
+}
+#searchbox::placeholder{
+    transition: color 0.5s;
+}
+input[type=submit]{
+    display: none;
+}
+#searchicon{
+    position: relative;
+    top: -33px;
+    left: -227px;
 }
 #buttons{
     display: flex;
     flex-direction: row;
-    margin-top: 40px;
 }
-button{
+input[type=button]{
     font-size: medium;
     background-color: rgb(228, 228, 228);
     padding: 10px 20px;
@@ -91,7 +103,7 @@ button{
     margin: 0 10px;
     transition: background-color 0.5s, color 0.5s;
 }
-button:hover{
+input[type=button]:hover{
     background-color: rgb(184, 184, 184);
     cursor: pointer;
 }
@@ -149,7 +161,7 @@ footer a{
         margin: 10px 0;
     }
     #searchbox{
-        width: 80%;
+        width: 90%;
     }
     #buttons{
         margin-top: 20px;

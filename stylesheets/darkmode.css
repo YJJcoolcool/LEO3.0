@@ -6,6 +6,12 @@ button{
     background-color: rgb(48, 48, 48);
     color: white;
 }
+#searchbox{
+    color: white;
+}
+#searchbox::placeholder{
+    color: white;
+}
 #specific a{
     color: #4e6eff;
 }
