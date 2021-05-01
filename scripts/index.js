@@ -36,6 +36,12 @@ function getCookie(cname) {
     return "";
 }
 
+function googleSearch(query){
+  query = query.replace(" ","+");
+  query = query.replace('"',"%22");
+  window.open("http://www.google.com/search?q="+query,"_blank")
+}
+
 if (getCookie("darkmode")=="y"){
     var link = document.createElement('link');
     link.type = 'text/css';
